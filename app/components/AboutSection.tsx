@@ -14,7 +14,7 @@ export default function AboutSection() {
           whileInView={{ opacity: 1, scale: 1, x: 0 }}
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 2, ease: [0.22, 1, 0.36, 1] }}
-          className="w-full aspect-square max-w-sm mx-auto lg:mx-0 bg-[#FADDE6] rounded-[2.5rem] flex items-center justify-center overflow-hidden"
+          className="w-full aspect-square max-w-sm mx-auto lg:mx-0 bg-[#FADDE6] rounded-tl-2xl rounded-tr-[6rem] rounded-bl-[6rem] rounded-br-2xl flex items-center justify-center overflow-hidden"
         >
           <div className="relative w-3/4 h-3/4">
             <Image
@@ -37,11 +37,18 @@ export default function AboutSection() {
           />
 
           <AnimatedWords
-            text={"Berawal dari ruang hangat di rumah kami, Rumah Bouquet Annie Mariea  hadir untuk merayakan setiap momen berharga Anda. Kami percaya bahwa seikat rangkaian bunga bukan sekadar hadiah, melainkan simbol kasih sayang, apresiasi, dan kebahagiaan yang tak terucapkan. \nKarena setiap pesanan dirangkai langsung secara handmade dari rumah dengan penuh ketelitian dan cinta, kami memastikan setiap detail bunga terasa personal, rapi, dan istimewa. Dibuat khusus untuk menemani momen kelulusan, ulang tahun, anniversary, hingga sejuta rasa manis untuk orang tersayang. Kami siap merangkai cerita terbaik Anda dalam wujud buket yang cantik."}
+            text="Berawal dari ruang hangat di rumah kami, Rumah Bouquet Annie Mariea hadir untuk merayakan setiap momen berharga Anda. Kami percaya bahwa seikat rangkaian bunga bukan sekadar hadiah, melainkan simbol kasih sayang, apresiasi, dan kebahagiaan yang tak terucapkan."
             el="p"
-            className="mt-4 text-justify text-sm md:text-base leading-relaxed text-black/90 max-w-xl mx-auto lg:mx-0 whitespace-pre-line"
+            className="mt-4 text-sm md:text-base leading-relaxed text-black/90 max-w-xl mx-auto lg:mx-0"
             highlightRange={[7, 10]}
             highlightClassName="font-bold italic text-[#FCA0B8]"
+            stagger={0.02}
+          />
+
+          <AnimatedWords
+            text="Karena setiap pesanan dirangkai langsung secara handmade dari rumah dengan penuh ketelitian dan cinta, kami memastikan setiap detail bunga terasa personal, rapi, dan istimewa. Dibuat khusus untuk menemani momen kelulusan, ulang tahun, anniversary, hingga sejuta rasa manis untuk orang tersayang. Kami siap merangkai cerita terbaik Anda dalam wujud buket yang cantik."
+            el="p"
+            className="mt-4 text-sm md:text-base leading-relaxed text-black/90 max-w-xl mx-auto lg:mx-0"
             stagger={0.02}
           />
         </div>

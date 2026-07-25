@@ -6,24 +6,17 @@ import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 
 const navLinks = [
-  { name: 'Home', href: '/#home' },
-  { name: 'About', href: '/#about' },
-  { name: 'Gallery', href: '/gallery' },
-  { name: 'Contact', href: '/#contact' },
+  { name: 'Home', href: '/#home', sectionId: 'home' },
+  { name: 'About', href: '/#about', sectionId: 'about' },
+  { name: 'Gallery', href: '/gallery', sectionId: null },
+  { name: 'Contact', href: '/#contact', sectionId: 'contact' },
 ];
 
 export default function Navbar() {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [activeHash, setActiveHash] = useState('');
-
-  useEffect(() => {
-    const updateHash = () => setActiveHash(window.location.hash);
-    updateHash();
-    window.addEventListener('hashchange', updateHash);
-    return () => window.removeEventListener('hashchange', updateHash);
-  }, []);
+  const [activeSection, setActiveSection] = useState('home');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -37,6 +30,39 @@ export default function Navbar() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  useEffect(() => {
+    if (pathname !== '/') return;
+
+    const sectionIds = navLinks
+      .map((link) => link.sectionId)
+      .filter((id): id is string => id !== null);
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      { rootMargin: '-45% 0px -45% 0px', threshold: 0 }
+    );
+
+    sectionIds.forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+
+    return () => observer.disconnect();
+  }, [pathname]);
+
+  const isLinkActive = (link: (typeof navLinks)[number]) => {
+    if (link.sectionId === null) {
+      return pathname === link.href;
+    }
+    return pathname === '/' && activeSection === link.sectionId;
+  };
 
   return (
     <nav
@@ -60,10 +86,7 @@ export default function Navbar() {
 
           <ul className="hidden md:flex items-center gap-6 lg:gap-10">
             {navLinks.map((link) => {
-              const isActive =
-                link.href === '/gallery'
-                  ? pathname === '/gallery'
-                  : pathname === '/' && activeHash === link.href.replace('/', '');
+              const isActive = isLinkActive(link);
               return (
                 <li key={link.href}>
                   <Link
@@ -93,10 +116,7 @@ export default function Navbar() {
         {isOpen && (
           <ul className="md:hidden flex flex-col gap-4 mt-5 pb-1">
             {navLinks.map((link) => {
-              const isActive =
-                link.href === '/gallery'
-                  ? pathname === '/gallery'
-                  : pathname === '/' && activeHash === link.href.replace('/', '');
+              const isActive = isLinkActive(link);
               return (
                 <li key={link.href}>
                   <Link
