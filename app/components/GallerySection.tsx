@@ -22,8 +22,8 @@ export default function GallerySection() {
     <div className="text-center">
       <div className="max-w-6xl mx-auto">
         <AnimatedWords
-          text="Gallery"
-          el="h2"
+          text="Gallery Bouquet"
+          el="h1"
           className="font-bold italic text-4xl text-[#FCA0B8]"
           stagger={0.15}
         />
@@ -32,11 +32,11 @@ export default function GallerySection() {
       <motion.div
         initial={{ opacity: 0, y: 40, filter: 'blur(10px)' }}
         whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
-        viewport={{ once: false, amount: 0.3 }}
-        transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1] }}
         className="mt-10 md:mt-14 relative w-screen left-1/2 ml-[-50vw] overflow-hidden"
       >
-        <div className="animate-marquee flex items-center gap-6 md:gap-8 w-max">
+        <div className="animate-marquee flex items-center gap-8 md:gap-16 w-max">
           {loopBouquets.map((src, i) => (
             <div key={i} className="w-28 md:w-40 lg:w-48 shrink-0">
               <Image
