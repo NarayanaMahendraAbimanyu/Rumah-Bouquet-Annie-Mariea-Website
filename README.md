@@ -1,36 +1,25 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+🌸 Deskripsi Project: Rumah Bouquet Annie Mariea
+Rumah Bouquet Annie Mariea adalah sebuah platform web katalog produk interaktif berbasis Single Page Application (SPA) yang dirancang khusus untuk memamerkan ragam produk custom bouquet buatan tangan (handmade).
 
-## Getting Started
+Website ini dibangun untuk memberikan pengalaman berbelanja visual yang elegan bagi calon pelanggan, sekaligus mempermudah alur pemesanan langsung (direct order) tanpa rumit.
 
-First, run the development server:
+✨ Fitur Utama
+Hero & About Section: Memperkenalkan keunikan brand, cerita di balik produk handmade, serta layanan kustom bouquet.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Galeri Produk Interaktif: Halaman galeri terpisah dengan tampilan grid yang responsif untuk memamerkan berbagai kategori bouquet (bunga, uang, snack, dan wisuda).
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Direct WhatsApp Integration: Fitur call-to-action dinamis di setiap produk yang secara otomatis menyusun pesan konsultasi/pemesanan ke WhatsApp penjual.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Typographic & Visual Elegance: Menggunakan font Poppins serta skema warna soft pink/pastel yang modern dan estetik.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+🛠️ Teknologi yang Digunakan
+Framework: Next.js (App Router)
 
-## Learn More
+Language: TypeScript (.tsx & .ts)
 
-To learn more about Next.js, take a look at the following resources:
+Styling: Tailwind CSS
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Font Optimization: next/font/google (Poppins)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+🎯 Tujuan Project
+Membuat wadah promosi digital yang ramah pengguna (user-friendly) bagi bisnis UMKM lokal, meningkatkan engagement pelanggan melalui komunikasi langsung via WhatsApp, serta menyajikan portofolio produk visual secara rapi dan profesional.
