@@ -12,11 +12,11 @@ export default function Home() {
         <HeroSection />
       </div>
 
-      <div id="about" className="scroll-mt-32 md:scroll-mt-40 lg:scroll-mt-36 w-full bg-white px-6 lg:px-16 py-16 md:py-24">
+      <div id="about" className="scroll-mt-32 md:scroll-mt-40 lg:scroll-mt-36 w-full bg-white px-6 lg:px-16 py-12 md:py-16">
         <AboutSection />
       </div>
 
-      <div id="gallery-preview" className="w-full bg-white px-6 lg:px-16 py-16 md:py-24">
+      <div id="gallery-preview" className="w-full bg-white px-6 lg:px-16 py-1 md:py-2">
         <GallerySection />
       </div>
     </main>
