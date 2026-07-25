@@ -62,15 +62,17 @@ export default function HeroSection() {
               }}
               className="flex items-center gap-4 mt-6"
             >
-              <button
-                ref={orderRef}
-                onMouseMove={handleMouseMove(orderRef)}
-                className="btn-order relative overflow-hidden font-bold text-white px-8 py-3 md:px-10 md:py-4 rounded-full text-sm md:text-base"
-              >
-                <span className="relative z-10">Order Now</span>
-              </button>
+              <Link href="/#contact">
+                <button
+                  ref={orderRef}
+                  onMouseMove={handleMouseMove(orderRef)}
+                  className="btn-order relative overflow-hidden font-bold text-white px-8 py-3 md:px-10 md:py-4 rounded-full text-sm md:text-base"
+                >
+                  <span className="relative z-10">Order Now</span>
+                </button>
+              </Link>
 
-              <Link href="/contact">
+              <Link href="/gallery">
                 <button
                   ref={galleryRef}
                   onMouseMove={handleMouseMove(galleryRef)}
