@@ -3,7 +3,8 @@ Rumah Bouquet Annie Mariea adalah sebuah platform web katalog produk interaktif 
 Website ini dibangun untuk memberikan pengalaman berbelanja visual yang elegan bagi calon pelanggan, sekaligus mempermudah alur pemesanan langsung (direct order) tanpa rumit.
 
 ✨ Fitur Utama
-Hero & About Section: Memperkenalkan keunikan brand, cerita di balik produk handmade, serta layanan kustom bouquet.
+Hero & About Section: 
+Memperkenalkan keunikan brand, cerita di balik produk handmade, serta layanan kustom bouquet.
 Galeri Produk Interaktif: Halaman galeri terpisah dengan tampilan grid yang responsif untuk memamerkan berbagai kategori bouquet (bunga, uang, snack, dan wisuda).
 Direct WhatsApp Integration: Fitur call-to-action dinamis di setiap produk yang secara otomatis menyusun pesan konsultasi/pemesanan ke WhatsApp penjual.
 Typographic & Visual Elegance: Menggunakan font Poppins serta skema warna soft pink/pastel yang modern dan estetik.
