@@ -59,10 +59,13 @@ export default function GallerySection() {
         className="max-w-6xl mx-auto"
       >
         <Link href="/gallery">
-          <button className="group mt-10 md:mt-14 inline-flex items-center gap-1.5 bg-[#FCA0B8] text-white font-normal px-8 py-3 md:px-10 md:py-4 rounded-full text-sm md:text-base transition-transform duration-300 hover:scale-105 hover:bg-[#FADDE6]">
+          <button className="group mt-10 md:mt-14 inline-flex items-center gap-1.5 bg-[#FCA0B8] text-white font-normal px-8 py-3 md:px-10 md:py-4 rounded-full text-sm md:text-base transition-transform duration-300 hover:scale-105">
             <span>Lihat lebih banyak</span>
             <span className="inline-flex">
               <span>&gt;</span>
+              <span className="w-0 opacity-0 group-hover:w-2.5 group-hover:opacity-100 transition-all duration-300 overflow-hidden">
+                &gt;
+              </span>
               <span className="w-0 opacity-0 group-hover:w-2.5 group-hover:opacity-100 transition-all duration-300 overflow-hidden">
                 &gt;
               </span>

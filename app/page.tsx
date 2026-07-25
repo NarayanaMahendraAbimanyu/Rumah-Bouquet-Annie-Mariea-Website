@@ -1,4 +1,3 @@
-import Navbar from './components/navbar';
 import HeroSection from './components/HeroSection';
 import AboutSection from './components/AboutSection';
 import GallerySection from './components/GallerySection';
@@ -8,8 +7,6 @@ import Footer from './components/Footer';
 export default function Home() {
   return (
     <main className="w-full overflow-x-hidden">
-      <Navbar />
-
       <div id="home">
         <HeroSection />
       </div>
